@@ -20,7 +20,21 @@ public class PacMan {
   }
 
   public boolean move() {
-    return false;
+    ArrayList<Location> valid_moves = get_valid_moves();
+
+    if (valid_moves.size() == 0) {
+      return false;
+    }
+
+    Location new_location = valid_moves.get(0);
+    boolean success = myMap.move(myName, new_location, Map.Type.PACMAN);
+
+    if (!success) {
+      return false;
+    }
+
+    myLoc = new_location;
+    return true;
   }
 
   public boolean is_ghost_in_range() {
