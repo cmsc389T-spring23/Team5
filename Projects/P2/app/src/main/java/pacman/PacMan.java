@@ -16,6 +16,27 @@ public class PacMan {
   }
 
   public ArrayList<Location> get_valid_moves() {
+    ArrayList<Location> moves = new ArrayList<Location>();
+    Location up = this.myLoc.shift(0,-1);
+    Location down = this.myLoc.shift(0,1);
+    Location left = this.myLoc.shift(-1,0);
+    Location right = this.myLoc.shift(1,0);
+
+
+    //how to check if move is within bounds?
+    if(up.x >= 0 && up.x < myMap.dim && !this.myMap.field.containsKey(up) || (this.myMap.field.containsKey(up) && this.myMap.field.get(up).contains(Map.Type.WALL))){
+      moves.add(up);
+    }
+    if(!this.myMap.field.containsKey(up) || (this.myMap.field.containsKey(down) && this.myMap.field.get(down).contains(Map.Type.WALL))){
+      moves.add(down);
+    }
+    if(!this.myMap.field.containsKey(up) || (this.myMap.field.containsKey(left) && this.myMap.field.get(left).contains(Map.Type.WALL))){
+      moves.add(left);
+    }
+    if(!this.myMap.field.containsKey(up) || (this.myMap.field.containsKey(right) && this.myMap.field.get(right).contains(Map.Type.WALL))){
+      moves.add(right);
+    }
+    
     return null;
   }
 
