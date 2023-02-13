@@ -22,22 +22,20 @@ public class PacMan {
     Location left = this.myLoc.shift(-1,0);
     Location right = this.myLoc.shift(1,0);
 
-
-    //how to check if move is within bounds?
-    if(up.x >= 0 && up.x < myMap.dim && !this.myMap.field.containsKey(up) || (this.myMap.field.containsKey(up) && this.myMap.field.get(up).contains(Map.Type.WALL))){
+    if(myMap.getLoc(up).contains(Map.Type.WALL)){
       moves.add(up);
     }
-    if(!this.myMap.field.containsKey(up) || (this.myMap.field.containsKey(down) && this.myMap.field.get(down).contains(Map.Type.WALL))){
+    if(myMap.getLoc(down).contains(Map.Type.WALL)){
       moves.add(down);
     }
-    if(!this.myMap.field.containsKey(up) || (this.myMap.field.containsKey(left) && this.myMap.field.get(left).contains(Map.Type.WALL))){
+    if(myMap.getLoc(left).contains(Map.Type.WALL)){
       moves.add(left);
     }
-    if(!this.myMap.field.containsKey(up) || (this.myMap.field.containsKey(right) && this.myMap.field.get(right).contains(Map.Type.WALL))){
+    if(myMap.getLoc(right).contains(Map.Type.WALL)){
       moves.add(right);
     }
-    
-    return null;
+  
+    return moves;
   }
 
   public boolean move() {
