@@ -2,7 +2,6 @@ package pacman;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import javax.sound.sampled.AudioFileFormat.Type;
 import javax.swing.JComponent;
 
 public class PacMan {
