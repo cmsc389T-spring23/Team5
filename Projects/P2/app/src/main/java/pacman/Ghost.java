@@ -22,6 +22,20 @@ public class Ghost {
   }
 
   public boolean is_pacman_in_range() {
+    Location ghostLoc = this.myLoc;
+    Location north = new Location(ghostLoc.x, ghostLoc.y -1);
+    Location south = new Location(ghostLoc.x, ghostLoc.y +1);
+    Location west = new Location(ghostLoc.x - 1, ghostLoc.y);
+    Location east = new Location(ghostLoc.x + 1, ghostLoc.y);
+
+    HashSet<Type> nTypes = this.myMap.getLoc(north);
+    HashSet<Type> sTypes = this.myMap.getLoc(south);
+    HashSet<Type> wTypes = this.myMap.getLoc(west);
+    HashSet<Type> eTypes = this.myMap.getLoc(east);
+    
+    if (nTypes.contains(Map.Type.PACMAN) || sTypes.contains(Map.Type.PACMAN) || wTypes.contains(Map.Type.PACMAN)|| eTypes.contains(Map.Type.PACMAN)) {
+      return true;
+    }
     return false;
   }
 
