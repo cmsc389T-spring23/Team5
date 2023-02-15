@@ -1,6 +1,8 @@
 package pacman;
 import java.util.ArrayList;
 import java.util.HashSet;
+
+import javax.sound.sampled.AudioFileFormat.Type;
 import javax.swing.JComponent;
 
 public class PacMan {
@@ -24,6 +26,21 @@ public class PacMan {
   }
 
   public boolean is_ghost_in_range() {
+    Location pacLoc = this.myLoc;
+    Location north = new Location(pacLoc.x, pacLoc.y -1);
+    Location south = new Location(pacLoc.x, pacLoc.y +1);
+    Location west = new Location(pacLoc.x - 1, pacLoc.y);
+    Location east = new Location(pacLoc.x + 1, pacLoc.y);
+
+    HashSet<Type> nTypes = this.myMap.getLoc(north);
+    HashSet<Type> sTypes = this.myMap.getLoc(south);
+    HashSet<Type> wTypes = this.myMap.getLoc(west);
+    HashSet<Type> eTypes = this.myMap.getLoc(east);
+    
+    if (nTypes.contains(Map.Type.GHOST) || sTypes.contains(Map.Type.GHOST) || wTypes.contains(Map.Type.GHOST)|| eTypes.contains(Map.Type.GHOST)) {
+      return true;
+    }
+
     return false;
   }
 
