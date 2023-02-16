@@ -55,9 +55,10 @@ public class Map {
   public boolean move(String name, Location loc, Type type) {
     //assume given a valid move
     //only return false if extreme case (location or name not in data structure)
-    if(!locations.containsKey(name) || !components.containsKey(name) || !field.contains(locations.get(name)) || !field.get(locations.get(name).contains(type))) {
+    if(!locations.containsKey(name) || !components.containsKey(name) || !field.containsKey(locations.get(name)) || !field.get(locations.get(name)).contains(type)) {
       return false;
     }
+
     Location og_loc = locations.get(name);
     JComponent comp = components.get(name);
     comp.setLocation(loc.x, loc.y);
