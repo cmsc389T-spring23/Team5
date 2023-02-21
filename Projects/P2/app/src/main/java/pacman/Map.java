@@ -53,9 +53,22 @@ public class Map {
   }
 
   public boolean move(String name, Location loc, Type type) {
+    //assume given a valid move
+    //only return false if extreme case (location or name not in data structure)
+    if(!locations.containsKey(name) || !components.containsKey(name) || !field.containsKey(locations.get(name)) || !field.get(locations.get(name)).contains(type)) {
+      return false;
+    }
+
+    Location og_loc = locations.get(name);
+    JComponent comp = components.get(name);
+    comp.setLocation(loc.x, loc.y);
+    locations.put(name, loc);
+    fields.get(og_loc).remove(type);
+    this.add(name, loc, comp, type);
+
     // update locations, components, and field
     // use the setLocation method for the component to move it to the new location
-    return false;
+    return true;
   }
 
   public HashSet<Type> getLoc(Location loc) {
