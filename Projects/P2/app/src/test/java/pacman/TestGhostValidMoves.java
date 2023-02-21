@@ -11,7 +11,7 @@ public class TestGhostValidMoves extends TestCase {
     //Creating Players
     Ghost ghost = frame.addGhost(new Location(1, 4), "name", Color.red);
     ArrayList<Location> moves = ghost.get_valid_moves();
-    if(moves.length() != 4){
+    if(moves.size() != 4){
       throw new FileNotFoundException();
     }
   }
