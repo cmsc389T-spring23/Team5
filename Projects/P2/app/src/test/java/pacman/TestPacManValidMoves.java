@@ -11,7 +11,7 @@ public class TestPacManValidMoves extends TestCase {
     //Creating Players
     PacMan pacman = frame.addPacMan(new Location(1, 4));
     ArrayList<Location> moves = pacman.get_valid_moves();
-    if(moves.length() != 4){
+    if(moves.size() != 4){
       throw new FileNotFoundException();
     }
   }
