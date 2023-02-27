@@ -9,11 +9,11 @@ public class TestMapAttack extends TestCase {
     Mainframe frame = new MainFrame();
     Ghost ghost = frame.addGhost(new Location(2,2), "Andrew", Color.red);
 
-    if (ghost.myMap(ghost.myName)) {
+    if (ghost.myMap.attack(ghost.myName)) {
       throw new FileNotFoundException();
     }
     PacMan leftman = frame.addPacMan(new Location(1, 2)); 
-    if (!ghost.myMap(ghost.myName)) {
+    if (!ghost.myMap.attack(ghost.myName)) {
       throw new FileNotFoundException();
     }
 
