@@ -64,7 +64,7 @@ gradle run
 - **Description:** We check the field variable at the given location to see if there have been any types added to that location. If there is no key associated with that location, then we know the location is empty so we return an empty set. Otherwise, we return the value of the location key in the field variable to get the set of types that exist at the specified location. The test case invokes a game, instantiates a pacman, and then throws an exception if the set returned from getLoc does not contain the PACMAN type.
 
 ### attack(String name)
-- **Description:**
+- **Description:** We first obtain information on whether a ghost exist or not by passing the ghost name as argument in the get() method from hashmap. If the result from the get method is null, that means the corresponding ghost does not exist so we return false. Otherwise the ghost exist, and we begin to identify possible valid locations of pacman in range. We then check if each possible locations actually contains pacman instances, if so then we update gameOver to true and return true, otherwise we do not attack and just return false.
 
 ### eatCookie(String Name)
 - **Description:**
