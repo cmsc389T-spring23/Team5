@@ -64,6 +64,7 @@ public class Map {
     comp.setLocation(loc.x, loc.y);
     locations.put(name, loc);
     fields.get(og_loc).remove(type);
+    fields.get(loc).add(type);
     this.add(name, loc, comp, type);
 
     // update locations, components, and field
