@@ -1,5 +1,5 @@
 
-# Project 1: PacMan
+# Project 2: PacMan
 
 Due: 03/01/23, 11:59pm
 
