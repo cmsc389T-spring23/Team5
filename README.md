@@ -36,7 +36,7 @@ gradle run
 - **Description:** We first check to see if there are any valid moves. If there are no valid moves, we return false. Otherwise, we take the first possible valid move and execute that move by invoking the move() method from Map and updating the pacman's location if the move was successful. If the move was successful, we return true. Otherwise, we return false. The test case invokes a game, instantiates a pacman, and then throws an exception if the expected functionality does not occur.
 
 ### is_ghost_in_range()
-- **Description:**
+- **Description:** We first identified possible locations of ghost in range, that is north, south, west, and east. We then obtained the types of objects at each given location using the getLoc() method from Map.java. Finally, we check to see if north, south, west, or east contains the type Map.Type.GHOST,  if so then we return true. Otherwise there are no ghost in range so we return false.
 
 ### consume()
 - **Description:**
@@ -50,7 +50,7 @@ gradle run
 - **Description:** We first check to see if there are any valid moves. If there are no valid moves, we return false. Otherwise, we take the first possible valid move and execute that move by invoking the move() method from Map and updating the ghost's location if the move was successful. If the move was successful, we return true. Otherwise, we return false. The test case invokes a game, instantiates a ghost, and then throws an exception if the expected functionality does not occur.
 
 ### is_pacman_in_range()
-- **Description:**
+- **Description:** We first identified possible locations of pacman in range, that is north, south, west, and east. We then obtained the types of object at each given location using the getLoc() method from Map.java. Finally, we check to see if north, south, west, or east contains the type Map.Type.PACMAN,  if so then we return true. Otherwise there are no pacman in range so we return false.
 
 ### attack()
 - **Description:**
