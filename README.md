@@ -30,7 +30,7 @@ gradle run
 ## PacMan Class Implementation
 
 ### get_valid_moves()
-- **Description:**
+- **Description:**  We create four potential locations for the four directions (up, down, left, right) from the current location. We check if there is a Wall object in that location. If not, we add that location to an ArrayList of locations. At the end, we return this list of locations. 
 
 ### move()
 - **Description:** We first check to see if there are any valid moves. If there are no valid moves, we return false. Otherwise, we take the first possible valid move and execute that move by invoking the move() method from Map and updating the pacman's location if the move was successful. If the move was successful, we return true. Otherwise, we return false. The test case invokes a game, instantiates a pacman, and then throws an exception if the expected functionality does not occur.
@@ -44,7 +44,7 @@ gradle run
 ## Ghost Class Implementation
 
 ### get_valid_moves()
-- **Description:**
+- **Description:** We create four potential locations for the four directions (up, down, left, right) from the current location. We check if there is a Wall object in that location. If not, we add that location to an ArrayList of locations. At the end, we return this list of locations. 
 
 ### move()
 - **Description:** We first check to see if there are any valid moves. If there are no valid moves, we return false. Otherwise, we take the first possible valid move and execute that move by invoking the move() method from Map and updating the ghost's location if the move was successful. If the move was successful, we return true. Otherwise, we return false. The test case invokes a game, instantiates a ghost, and then throws an exception if the expected functionality does not occur.
