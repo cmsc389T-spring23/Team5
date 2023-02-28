@@ -39,7 +39,7 @@ gradle run
 - **Description:** We first identified possible locations of ghost in range, that is north, south, west, and east. We then obtained the types of objects at each given location using the getLoc() method from Map.java. Finally, we check to see if north, south, west, or east contains the type Map.Type.GHOST,  if so then we return true. Otherwise there are no ghost in range so we return false. The test invokes a game, instantiates a pacman, and throws an exception if ghost is in range while no ghost exist and throws an exception if ghost is not in range while a ghost is right next to the pacman.
 
 ### consume()
-- **Description:**
+- **Description:** We first check if the current location of Pacman also has a cookie there. If there is, Pacman will consume the cookie and return the cookie component. Otherwise, we return null if a cookie is not at the same location of the current location of Pacman. The test checks if Pacman will eat the cookie if both Pacman and the cookie are at the same location. If Pacman does not eat the cookie, an exception is thrown.
 
 ## Ghost Class Implementation
 
@@ -53,7 +53,7 @@ gradle run
 - **Description:** We first identified possible locations of pacman in range, that is north, south, west, and east. We then obtained the types of object at each given location using the getLoc() method from Map.java. Finally, we check to see if north, south, west, or east contains the type Map.Type.PACMAN,  if so then we return true. Otherwise there are no pacman in range so we return false. The test invokes a game, instantiates a ghost, and throws an exception if pacman is in range while no pacman exist and throws an exception if pacman is not in range while a pacman is right next to the ghost.
 
 ### attack()
-- **Description:**
+- **Description:** We first check if Pacman is in range of the Ghost by calling the is_pacman_in_range function. If it is, we attack Pacman and return true. Otherwise, we return false if we cannot attack Pacman. The test checks if a Ghost attacks Pacman if both of them are at the same location. If the Ghost does not attack Pacman, an exception is thrown.
 
 ## Map Class Implementation
 
@@ -67,5 +67,5 @@ gradle run
 - **Description:** We first obtain information on whether a ghost exist or not by passing the ghost name as argument in the get() method from hashmap. If the result from the get method is null, that means the corresponding ghost does not exist so we return false. Otherwise the ghost exist, and we begin to identify possible valid locations of pacman in range. We then check if each possible locations actually contains pacman instances, if so then we update gameOver to true and return true, otherwise we do not attack and just return false. The test invokes a game, instantiates a ghost, and throws an exception if ghost attack returns true when no pacman exist. It also throws an exception if attack returns false, when a pacman is in attack range of the ghost
 
 ### eatCookie(String Name)
-- **Description:**
+- **Description:** We first check if there is a cookie at the current location of the Pacman. If there is a cookie at Pacman's location, then Pacman can eat the cookie, so the number of cookies will be decremented by 1. Also, since Pacman eats the cookie, we remove the cookie at the location of Pacman, and return that cookie component. If there isn't a cookie at Pacman's location, we return null. The test checks if Pacman eats a cookies if it is at his location by adding a Pacman and cookie at the same location. If it doesn't eat it, an exception is thrown.
 
