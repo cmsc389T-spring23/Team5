@@ -63,8 +63,8 @@ public class Map {
     JComponent comp = components.get(name);
     comp.setLocation(loc.x, loc.y);
     locations.put(name, loc);
-    fields.get(og_loc).remove(type);
-    fields.get(loc).add(type);
+    field.get(og_loc).remove(type);
+    field.get(loc).add(type);
     this.add(name, loc, comp, type);
 
     // update locations, components, and field
@@ -108,10 +108,11 @@ public class Map {
   public JComponent eatCookie(String name) {
     // update locations, components, field, and cookies
     // the id for a cookie at (10, 1) is tok_x10_y1
-    if (Map.getLoc(PacMan.myLoc).contains(Type.COOKIE)) {
+    Location pacman = locations.get(name);
+    if (getLoc(pacman).contains(Map.Type.COOKIE)) {
       this.cookies--;
-      Map.getLoc(PacMan.myLoc).remove(Type.COOKIE);
-      return this.components.get("tok_x" + PacMan.myLoc.x + "_y" + PacMan.myLoc.y);
+      getLoc(pacman).remove(Map.Type.COOKIE);
+      return this.components.get("tok_x" + pacman.x + "_y" + pacman.y);
     } else {
       return null;
     }

@@ -1,5 +1,6 @@
 package pacman;
 import java.io.*;
+import java.util.*;
 import junit.framework.*;
 import java.awt.Color;
 

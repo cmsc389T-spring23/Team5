@@ -61,10 +61,10 @@ public class Ghost {
     Location west = new Location(ghostLoc.x - 1, ghostLoc.y);
     Location east = new Location(ghostLoc.x + 1, ghostLoc.y);
 
-    HashSet<Type> nTypes = this.myMap.getLoc(north);
-    HashSet<Type> sTypes = this.myMap.getLoc(south);
-    HashSet<Type> wTypes = this.myMap.getLoc(west);
-    HashSet<Type> eTypes = this.myMap.getLoc(east);
+    HashSet<Map.Type> nTypes = this.myMap.getLoc(north);
+    HashSet<Map.Type> sTypes = this.myMap.getLoc(south);
+    HashSet<Map.Type> wTypes = this.myMap.getLoc(west);
+    HashSet<Map.Type> eTypes = this.myMap.getLoc(east);
     
     if (nTypes.contains(Map.Type.PACMAN) || sTypes.contains(Map.Type.PACMAN) || wTypes.contains(Map.Type.PACMAN)|| eTypes.contains(Map.Type.PACMAN)) {
       return true;
@@ -74,7 +74,7 @@ public class Ghost {
 
   public boolean attack() {
     if (is_pacman_in_range() == true) {
-      Map.attack("attack");
+      myMap.attack("attack");
       return true;
     } 
     else {

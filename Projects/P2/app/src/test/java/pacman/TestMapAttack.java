@@ -6,7 +6,7 @@ import java.awt.Color;
 public class TestMapAttack extends TestCase {
 
   public void testMapAttack() throws FileNotFoundException {
-    Mainframe frame = new MainFrame();
+    MainFrame frame = new MainFrame();
     Ghost ghost = frame.addGhost(new Location(2,2), "Andrew", Color.red);
 
     if (ghost.myMap.attack(ghost.myName)) {
