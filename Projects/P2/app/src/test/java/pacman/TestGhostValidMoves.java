@@ -10,9 +10,9 @@ public class TestGhostValidMoves extends TestCase {
     MainFrame frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
 
     //Creating Players
-    Ghost ghost = frame.addGhost(new Location(1, 4), "name", Color.red);
+    Ghost ghost = frame.addGhost(new Location(0, 0), "name", Color.red);
     ArrayList<Location> moves = ghost.get_valid_moves();
-    if(moves.size() != 4){
+    if(moves.size() != 2){
       throw new FileNotFoundException();
     }
   }
