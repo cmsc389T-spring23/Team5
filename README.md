@@ -26,8 +26,8 @@ gradle run
 ## PacMan in Action
 
 ### Below is an image of our PacMan game being played
-![](pacman_start.png)
-![](pacman_board.png)
+![](pacman_start.png | width=100)
+![](pacman_board.png | width=100)
 
 ## PacMan Class Implementation
 
