@@ -26,6 +26,8 @@ gradle run
 ## PacMan in Action
 
 ### Below is an image of our PacMan game being played
+![](pacman_start.png)
+![](pacman_board.png)
 
 ## PacMan Class Implementation
 
@@ -68,6 +70,3 @@ gradle run
 
 ### eatCookie(String Name)
 - **Description:** We first check if there is a cookie at the current location of the Pacman. If there is a cookie at Pacman's location, then Pacman can eat the cookie, so the number of cookies will be decremented by 1. Also, since Pacman eats the cookie, we remove the cookie at the location of Pacman, and return that cookie component. If there isn't a cookie at Pacman's location, we return null. The test checks if Pacman eats a cookies if it is at his location by adding a Pacman and cookie at the same location. If it doesn't eat it, an exception is thrown.
-
-![](pacman_start.png)
-![](pacman_board.png)
