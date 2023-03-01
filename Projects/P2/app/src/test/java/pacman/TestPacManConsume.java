@@ -9,7 +9,7 @@ public class TestPacManConsume extends TestCase {
     MainFrame frame = new MainFrame();
     PacMan pacman = frame.addPacMan(new Location(0,0));
     frame.getMap().add("cookie", new Location(0,0), new CookieComponent(0,0,1), Map.Type.COOKIE);
-    if (frame.getMap().eatCookie("eat") == null) {
+    if (frame.getMap().eatCookie("pacman") == null) {
       throw new FileNotFoundException();
     }
   }
