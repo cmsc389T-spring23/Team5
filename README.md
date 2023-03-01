@@ -26,9 +26,11 @@ gradle run
 ## PacMan in Action
 
 ### Below is an image of our PacMan game being played
+<p>
 <img src="pacman_start.png" width=50% height=50%>
 <img src="pacman_start.png" width=50% height=50%>
-
+</p>
+  
 ## PacMan Class Implementation
 
 ### get_valid_moves()
