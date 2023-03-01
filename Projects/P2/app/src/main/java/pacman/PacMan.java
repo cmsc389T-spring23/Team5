@@ -28,6 +28,10 @@ public class PacMan {
   }
 
   public JComponent consume() {
-    return null;
+    if (Map.myLoc(this.myLoc).contains(Type.COOKIE)) {
+      return Map.eatCookie("consume");
+    } else {
+      return null;
+    }
   }
 }
