@@ -26,10 +26,10 @@ gradle run
 ## PacMan in Action
 
 ### Below is an image of our PacMan game being played
-<div>
-<img src="pacman_start.png" width=50% height=50%>
-<img src="pacman_start.png" width=50% height=50%>
-</div>
+<p>
+<img src="pacman_start.png" width=40% height=40%>
+<img src="pacman_start.png" width=40% height=40%>
+</p>
   
 ## PacMan Class Implementation
 
