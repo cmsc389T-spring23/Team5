@@ -76,7 +76,9 @@ public class Ghost {
     if (is_pacman_in_range() == true) {
       Map.attack("attack");
       return true;
-    } else {
+    } 
+    else {
       return false;
     }
+  }
 }
