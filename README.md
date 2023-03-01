@@ -27,8 +27,8 @@ gradle run
 
 ### Below is an image of our PacMan game being played
 <p>
-<img src="pacman_start.png" width=45% height=45%>
-<img src="pacman_board.png" width=45% height=45%>
+<img src="pacman_start.png" width=49% height=49%>
+<img src="pacman_board.png" width=49% height=49%>
 </p>
   
 ## PacMan Class Implementation
