@@ -38,12 +38,14 @@ public class Ghost {
 
   public boolean move() {
     ArrayList<Location> valid_moves = get_valid_moves();
+    int len = valid_moves.size();
 
-    if (valid_moves.size() == 0) {
+    if (len == 0) {
       return false;
     }
 
-    Location new_location = valid_moves.get(0);
+    int random_idx = (int) (Math.random() * len);
+    Location new_location = valid_moves.get(random_idx);
     boolean success = myMap.move(myName, new_location, Map.Type.GHOST);
 
     if (!success) {
