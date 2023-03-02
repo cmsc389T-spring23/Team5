@@ -110,7 +110,7 @@ public class Map {
     // the id for a cookie at (10, 1) is tok_x10_y1
     Location pacman = locations.get(name);
     if (getLoc(pacman).contains(Map.Type.COOKIE)) {
-      this.cookies--;
+      this.cookies++;
       getLoc(pacman).remove(Map.Type.COOKIE);
       return this.components.get("tok_x" + pacman.x + "_y" + pacman.y);
     } else {
