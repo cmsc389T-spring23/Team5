@@ -112,7 +112,12 @@ public class Map {
     if (getLoc(pacman).contains(Map.Type.COOKIE)) {
       this.cookies++;
       getLoc(pacman).remove(Map.Type.COOKIE);
-      return this.components.get("tok_x" + pacman.x + "_y" + pacman.y);
+      //System.out.println("tok_x" + Integer.toString(pacman.x) + "_y" + Integer.toString(pacman.y));
+      for(String s: this.components.keySet()) {
+        System.out.println(s);
+      }
+
+      return this.components.get("tok_x" + Integer.toString(pacman.x) + "_y" + Integer.toString(pacman.y));
     } else {
       return null;
     }
