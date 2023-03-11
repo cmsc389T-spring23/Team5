@@ -6,7 +6,7 @@ import java.awt.Color;
 public class TestPacManMove extends TestCase {
 
   public void testPacManMove() throws FileNotFoundException {
-    MainFrame frame = new MainFrame();
+    NoFrame frame = new NoFrame();
     PacMan pacman = frame.addPacMan(new Location(1, 2));
 
     if (pacman.get_valid_moves().size() > 0) {
