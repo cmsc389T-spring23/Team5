@@ -31,7 +31,7 @@ jobs:
         run: |
           cd ./Projects/P2
           ./gradlew build testClasses -x test
-          ./gradlew test --tests TestPacManMove
+          ./gradlew test --tests -Djava.awt.headless=true TestPacManMove
   
   ghostmove:
     # The type of runner that the job will run on
@@ -45,7 +45,7 @@ jobs:
         run: |
           cd ./Projects/P2
           ./gradlew build testClasses -x test
-          ./gradlew test --tests TestGhostMove
+          ./gradlew test --tests -Djava.awt.headless=true TestGhostMove
   
   mapgetloc:
     # The type of runner that the job will run on
@@ -59,4 +59,4 @@ jobs:
         run: |
           cd ./Projects/P2
           ./gradlew build testClasses -x test
-          ./gradlew test --tests TestMapGetLoc
+          ./gradlew test --tests -Djava.awt.headless=true TestMapGetLoc
