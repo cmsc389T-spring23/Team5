@@ -35,7 +35,8 @@ public class PacMan {
       moves.add(right);
     }
   
-    return moves;
+    //return moves;
+    return null;
   }
 
   public boolean move() {

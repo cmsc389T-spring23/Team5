@@ -33,7 +33,8 @@ public class Ghost {
       moves.add(right);
     }
 
-    return moves;
+    //return moves;
+    return null;
   }
 
   public boolean move() {
