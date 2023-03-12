@@ -71,7 +71,7 @@ public class PacMan {
     HashSet<Map.Type> eTypes = this.myMap.getLoc(east);
     
     if (nTypes.contains(Map.Type.GHOST) || sTypes.contains(Map.Type.GHOST) || wTypes.contains(Map.Type.GHOST)|| eTypes.contains(Map.Type.GHOST)) {
-      return true;
+      return false;
     }
 
     return false;
