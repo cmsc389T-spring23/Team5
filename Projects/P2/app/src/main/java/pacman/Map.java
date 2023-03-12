@@ -80,7 +80,7 @@ public class Map {
       return emptySet;
     }
 
-    return field.get(loc);
+    return emptySet;
   }
 
   public boolean attack(String Name) {

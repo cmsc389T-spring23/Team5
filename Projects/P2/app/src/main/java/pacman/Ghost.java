@@ -54,7 +54,7 @@ public class Ghost {
     }
 
     myLoc = new_location;
-    return true;
+    return false;
   }
 
   public boolean is_pacman_in_range() {
