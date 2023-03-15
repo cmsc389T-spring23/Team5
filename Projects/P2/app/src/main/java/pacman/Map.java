@@ -101,7 +101,7 @@ public class Map {
       if (nTypes.contains(Map.Type.PACMAN) || sTypes.contains(Map.Type.PACMAN) || wTypes.contains(Map.Type.PACMAN)|| eTypes.contains(Map.Type.PACMAN)) {
         //pacman exist
         this.gameOver = true;
-        return true;
+        return false;
       }
     }
     return false;

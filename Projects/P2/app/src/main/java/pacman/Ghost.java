@@ -70,7 +70,7 @@ public class Ghost {
     HashSet<Map.Type> eTypes = this.myMap.getLoc(east);
     
     if (nTypes.contains(Map.Type.PACMAN) || sTypes.contains(Map.Type.PACMAN) || wTypes.contains(Map.Type.PACMAN)|| eTypes.contains(Map.Type.PACMAN)) {
-      return true;
+      return false;
     }
     return false;
   }
