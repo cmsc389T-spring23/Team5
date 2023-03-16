@@ -33,7 +33,8 @@ public class Ghost {
       moves.add(right);
     }
 
-    return moves;
+    //return moves;
+    return null;
   }
 
   public boolean move() {
@@ -53,7 +54,7 @@ public class Ghost {
     }
 
     myLoc = new_location;
-    return true;
+    return false;
   }
 
   public boolean is_pacman_in_range() {
@@ -69,7 +70,7 @@ public class Ghost {
     HashSet<Map.Type> eTypes = this.myMap.getLoc(east);
     
     if (nTypes.contains(Map.Type.PACMAN) || sTypes.contains(Map.Type.PACMAN) || wTypes.contains(Map.Type.PACMAN)|| eTypes.contains(Map.Type.PACMAN)) {
-      return true;
+      return false;
     }
     return false;
   }
@@ -77,7 +78,7 @@ public class Ghost {
   public boolean attack() {
     if (is_pacman_in_range() == true) {
       myMap.attack(myName);
-      return true;
+      return false;
     } 
     else {
       return false;

@@ -69,7 +69,9 @@ public class Map {
 
     // update locations, components, and field
     // use the setLocation method for the component to move it to the new location
-    return true;
+    
+    //return true;
+    return false;
   }
 
   public HashSet<Type> getLoc(Location loc) {
@@ -78,7 +80,7 @@ public class Map {
       return emptySet;
     }
 
-    return field.get(loc);
+    return emptySet;
   }
 
   public boolean attack(String Name) {
@@ -99,7 +101,7 @@ public class Map {
       if (nTypes.contains(Map.Type.PACMAN) || sTypes.contains(Map.Type.PACMAN) || wTypes.contains(Map.Type.PACMAN)|| eTypes.contains(Map.Type.PACMAN)) {
         //pacman exist
         this.gameOver = true;
-        return true;
+        return false;
       }
     }
     return false;
@@ -112,7 +114,7 @@ public class Map {
     if (getLoc(pacman).contains(Map.Type.COOKIE)) {
       this.cookies++;
       getLoc(pacman).remove(Map.Type.COOKIE);
-      return this.components.get("tok_x" + Integer.toString(pacman.x) + "_y" + Integer.toString(pacman.y));
+      return null;
     } else {
       return null;
     }

@@ -35,7 +35,8 @@ public class PacMan {
       moves.add(right);
     }
   
-    return moves;
+    //return moves;
+    return null;
   }
 
   public boolean move() {
@@ -55,7 +56,7 @@ public class PacMan {
     }
 
     myLoc = new_location;
-    return true;
+    return false;
   }
 
   public boolean is_ghost_in_range() {
@@ -71,7 +72,7 @@ public class PacMan {
     HashSet<Map.Type> eTypes = this.myMap.getLoc(east);
     
     if (nTypes.contains(Map.Type.GHOST) || sTypes.contains(Map.Type.GHOST) || wTypes.contains(Map.Type.GHOST)|| eTypes.contains(Map.Type.GHOST)) {
-      return true;
+      return false;
     }
 
     return false;
@@ -79,7 +80,7 @@ public class PacMan {
 
   public JComponent consume() {
     if (myMap.getLoc(myLoc).contains(Map.Type.COOKIE)) {
-      return myMap.eatCookie(myName);
+      return null;
     } else {
       return null;
     }
