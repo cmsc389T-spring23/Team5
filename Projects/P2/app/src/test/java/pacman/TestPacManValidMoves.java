@@ -7,7 +7,7 @@ import java.awt.Color;
 public class TestPacManValidMoves extends TestCase {
 
   public void testPacManValidMoves() throws FileNotFoundException {
-    MainFrame frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
+    NoFrame frame = new NoFrame(); //Creates A New Map With Walls and Tokens Initialized
 
     //Creating Players
     PacMan pacman = frame.addPacMan(new Location(0, 0));

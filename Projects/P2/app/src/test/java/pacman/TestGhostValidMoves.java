@@ -7,7 +7,7 @@ import java.awt.Color;
 public class TestGhostValidMoves extends TestCase {
 
   public void testGhostValidMoves() throws FileNotFoundException {
-    MainFrame frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
+    NoFrame frame = new NoFrame(); //Creates A New Map With Walls and Tokens Initialized
 
     //Creating Players
     Ghost ghost = frame.addGhost(new Location(0, 0), "name", Color.red);

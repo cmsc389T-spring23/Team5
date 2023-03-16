@@ -6,7 +6,7 @@ import java.awt.Color;
 public class TestGhostMove extends TestCase {
 
   public void testGhostMove() throws FileNotFoundException {
-    MainFrame frame = new MainFrame();
+    NoFrame frame = new NoFrame();
     Ghost ghost = frame.addGhost(new Location(1, 2), "ghost1", Color.pink);
 
     if (ghost.get_valid_moves().size() > 0) {
