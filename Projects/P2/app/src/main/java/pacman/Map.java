@@ -116,7 +116,7 @@ public class Map {
       getLoc(pacman).remove(Map.Type.COOKIE);
       return null;
     } else {
-      return this.components.get("tok_x" + Integer.toString(pacman.x) + "_y" + Integer.toString(pacman.y));
+      return null;
     }
   }
 }
