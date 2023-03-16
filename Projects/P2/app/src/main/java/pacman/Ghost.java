@@ -81,7 +81,7 @@ public class Ghost {
       return true;
     } 
     else {
-      return false;
+      return true;
     }
   }
 }
